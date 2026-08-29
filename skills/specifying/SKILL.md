@@ -8,6 +8,18 @@ description: Reach a written agreement with the user before any code is written.
 Fill in the ten items below, write them out as the agreement, and stop there. Implementation is a
 separate conversation, held after they accept.
 
+## Restate first
+
+Before you look at any code, write item 1 and item 2 in the chat. Only those two.
+
+Then ask one question: is this the right direction? Wait for the answer.
+
+A wrong direction makes every later step waste. The code cannot tell you the direction, only the user
+can. If they correct you, restate again and ask again.
+
+Start on the other items after they accept the direction. Item 1 appears twice: here, and again in the
+finished agreement.
+
 ## The items
 
 1. **The task, restated** — in their terms, one paragraph.
@@ -32,7 +44,8 @@ For each item, in this order of preference:
 - **Have it.** They gave it to you. Check it rather than rebuild it — a supplied user story still hides a
   why, and still has unstated exclusions.
 - **Infer it.** From the request, the codebase, the running system, existing tickets or docs. Items 4 and
-  5 are always found by looking. Prefer looking wherever looking can answer.
+  5 are always found by looking. Prefer looking wherever looking can answer. Look only after the user
+  accepts the direction.
 - **Ask.** For what looking cannot resolve: intent, priorities, business rules, who it's for, what "done"
   means to them.
 
