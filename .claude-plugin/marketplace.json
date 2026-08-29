@@ -1,11 +1,15 @@
 {
   "name": "cove",
-  "owner": { "name": "Eivin Landa", "email": "eivin.landa@gmail.com" },
+  "owner": {
+    "name": "Eivin Landa",
+    "email": "eivin.landa@gmail.com"
+  },
   "plugins": [
     {
       "name": "skills",
       "source": "./",
       "description": "Skills for working with Claude one step at a time: ask before you act, agree on the task, then do the work."
     }
-  ]
+  ],
+  "description": "Skills that set how Claude works with you: one question per turn, agree first, then do the work."
 }
