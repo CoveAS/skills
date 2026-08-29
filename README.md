@@ -16,6 +16,14 @@ To install from a local clone, give the path instead:
 /plugin install skills@cove
 ```
 
+## Updates
+
+```
+/plugin update skills@cove
+```
+
+The plugin declares no version, so each commit counts as a new one. `claude plugin validate` warns about the missing version. That warning is expected.
+
 ## The skills
 
 Most skills start when you invoke them, for example `/working`.
