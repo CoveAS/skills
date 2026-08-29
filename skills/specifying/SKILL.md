@@ -37,6 +37,12 @@ finished agreement.
 10. **Risks** — data changes or migration, permissions, performance, rollback, who else is affected.
     Say "none" once you have checked each.
 
+## The story form
+
+As a *[role]*, I want *[need]*, so that *[benefit]*. The benefit is not the need said again.
+Name the need, never the screen, the button or the field.
+Split the story when an "or" or an "and" joins two causes or two benefits.
+
 ## How to fill them
 
 For each item, in this order of preference:
