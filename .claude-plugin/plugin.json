@@ -1,0 +1,8 @@
+{
+  "name": "skills",
+  "description": "Skills for working with Claude one step at a time: ask before you act, agree on the task, then do the work.",
+  "version": "1.0.0",
+  "author": { "name": "Eivin Landa", "email": "eivin.landa@gmail.com" },
+  "license": "MIT",
+  "keywords": ["skills", "workflow", "planning", "code-review", "documentation"]
+}
