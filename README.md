@@ -5,7 +5,7 @@ Skills for Claude Code. Each skill sets how Claude works with you, not what Clau
 ## Install
 
 ```
-/plugin marketplace add coveas/skills
+/plugin marketplace add CoveAS/skills
 /plugin install skills@cove
 ```
 
