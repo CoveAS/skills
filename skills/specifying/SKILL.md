@@ -66,8 +66,8 @@ refill it and say so.
 - **One question per turn.** Never two. Take as many turns as it needs.
 - Write questions so they are easy to understand and easy to answer.
 - **Prefer a correction to a composition.** State your assumption and ask them to correct it. "I'm
-  assuming this is logged-in users only — right?" beats "who is this for?"
-- Offer concrete options when the answer is a choice.
+  assuming this is logged-in users only, right?" beats "who is this for?"
+- Offer concrete numbered list options when the answer is a choice.
 - Never batch questions into a list to save time. It doesn't.
 
 ## Before writing the agreement
@@ -85,18 +85,13 @@ You are the only one who has seen the code. Silence here reads as agreement.
 ## The agreement
 
 Write all ten items in the chat as one block they can copy, where they can react to it line by line.
-
-Then ask the question that is usually missing: **how will you know this worked?** Their answer is often a
-better specification than the original request was.
+Be extremely concise. Never say the same thing twice when an earlier item already covers it.
 
 Wait for words that say yes.
+
+Then ask one question: do they want a plan for how to build it? Use the `planning` skill if they do.
 
 ## Re-entry
 
 If they invoke this again, or change the request substantially mid-flight, start over with the new
 request. Carry forward what is still true; refill anything the change touched.
-
-## When to skip this entirely
-
-The request is small, well understood, and you already know where the code lives. This is proportional to
-uncertainty, not to politeness.
