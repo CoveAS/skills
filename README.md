@@ -31,13 +31,13 @@ Most skills start when you invoke them, for example `/working`.
 | Skill | What it does |
 | --- | --- |
 | `chatting` | Answers in short chat messages, one thing at a time. |
-| `confused-business-owner` | Reads a screen or a message as a first time business owner would. |
 | `creating-pr` | Writes the title and body of a pull request, then opens it. |
 | `outlining` | Asks one question per turn until the task is clear, then writes the outline. |
 | `planning` | Turns an agreed specification into numbered implementation steps. |
 | `scoping-projects` | Interviews you into a mission statement, a style guide and build phases. |
 | `specifying` | Fills a fixed list of items, then writes the agreement you sign off before any code. |
 | `step-by-step` | Does one step at a time, and asks before each judgment call. |
+| `storytelling-as-a-business-owner` | Writes a user story as a business owner who wants a result, not software. |
 | `understanding` | Builds a shared understanding of the task before any work starts. |
 | `working` | Runs the path investigate, discuss, plan, do. You pick where to get on and off. |
 | `worktreeing` | Moves the session into a git worktree, so the main checkout stays free. |
