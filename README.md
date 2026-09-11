@@ -31,6 +31,7 @@ Most skills start when you invoke them, for example `/working`.
 | Skill | What it does |
 | --- | --- |
 | `chatting` | Answers in short chat messages, one thing at a time. |
+| `confused-business-owner` | Reads a screen or a message as a first time business owner would. |
 | `creating-pr` | Writes the title and body of a pull request, then opens it. |
 | `outlining` | Asks one question per turn until the task is clear, then writes the outline. |
 | `planning` | Turns an agreed specification into numbered implementation steps. |
