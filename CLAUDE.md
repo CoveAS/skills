@@ -40,3 +40,9 @@ The plugin is installed from this repo. A push is not enough, the local copy mus
 4. Restart Claude Code.
 
 The plugin declares no version, so each commit counts as a new one. `claude plugin validate` warns about the missing version. That warning is expected.
+
+After you add a skill or edit one, offer to run all four steps. Ask the user to answer `y` to approve.
+
+Claude runs steps 1 to 3. Only the restart belongs to the user.
+
+If a command needs permission, ask the user for it and go on.
