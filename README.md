@@ -36,6 +36,7 @@ Most skills start when you invoke them, for example `/working`.
 | `planning` | Turns an agreed specification into numbered implementation steps. |
 | `scoping-projects` | Interviews you into a mission statement, a style guide and build phases. |
 | `specifying` | Fills a fixed list of items, then writes the agreement you sign off before any code. |
+| `stating-problems` | Writes a short problem brief: the problem, the facts, the behaviour now and wanted, the key files. |
 | `step-by-step` | Does one step at a time, and asks before each judgment call. |
 | `storytelling-as-a-business-owner` | Writes a user story as a business owner who wants a result, not software. |
 | `understanding` | Builds a shared understanding of the task before any work starts. |
