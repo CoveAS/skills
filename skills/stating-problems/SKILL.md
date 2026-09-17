@@ -12,4 +12,6 @@ Write the brief in this order. Keep every part short.
 
 Read the code before you write the file list. Give real line numbers.
 
+Put the whole brief in one markdown code block. The user copies it out.
+
 Write nothing else. No preamble, no summary, no plan.
