@@ -35,6 +35,7 @@ Most skills start when you invoke them, for example `/working`.
 | `outlining` | Asks one question per turn until the task is clear, then writes the outline. |
 | `planning` | Turns an agreed specification into numbered implementation steps. |
 | `scoping-projects` | Interviews you into a mission statement, a style guide and build phases. |
+| `sniffing` | Names the worst code smells in code you point at, as a keyword list. |
 | `specifying` | Fills a fixed list of items, then writes the agreement you sign off before any code. |
 | `stating-problems` | Writes a short problem brief: the problem, the facts, the behaviour now and wanted, the key files. |
 | `step-by-step` | Does one step at a time, and asks before each judgment call. |
