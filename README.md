@@ -32,6 +32,7 @@ Most skills start when you invoke them, for example `/working`.
 | --- | --- |
 | `chatting` | Answers in short chat messages, one thing at a time. |
 | `creating-pr` | Writes the title and body of a pull request, then opens it. |
+| `dumping-session` | Captures the essence of a session: the files, the problems, the decisions and the next step. |
 | `outlining` | Asks one question per turn until the task is clear, then writes the outline. |
 | `planning` | Turns an agreed specification into numbered implementation steps. |
 | `scoping-projects` | Interviews you into a mission statement, a style guide and build phases. |
