@@ -8,7 +8,7 @@ Most sessions have only some of the parts below. Include a part only when the se
 
 In each part, keep only the items that matter. Leave out small steps, routine reads and anything the next session does not need.
 
-Write the dump in this order. Keep every part short.
+Write the dump in this order. Keep every part short. Skip any part that does not apply or is not needed.
 
 1. The session. One sentence about what the session did. Always include this part.
 2. The state. The branch, and whether any changes are not committed.

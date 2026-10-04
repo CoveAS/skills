@@ -45,3 +45,11 @@ could not work the why out.
 2. Push the branch.
 3. Show the body. Wait for the user to approve it.
 4. Open the PR. Use `gh pr create` for a GitHub remote. Use `glab mr create` for a GitLab remote.
+
+## Claude's signature
+
+Claude signs only with two dashes followed by the model name and effort level, and brain emoji if 🧠 thinking is on, nothing else.
+Example:
+```
+-- Opus 5.5 medium 🧠
+```
