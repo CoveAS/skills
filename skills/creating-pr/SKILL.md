@@ -44,6 +44,7 @@ you could not work the why out.
 2. Push the branch.
 3. Show the body. Wait for the user to approve it.
 4. Open the PR. Use `gh pr create` for a GitHub remote. Use `glab mr create` for a GitLab remote.
+5. If the session works in a worktree, ask the user if the session should leave it. A yes means `ExitWorktree` with `remove`. Set `discard_changes: true` only when the remote has every commit and no file is uncommitted. Otherwise stop and tell the user.
 
 ## Claude's signature
 

@@ -12,7 +12,7 @@ The base ref is `origin/<default-branch>`. To start from the current local HEAD 
 
 ## Plan
 
-Run the `working` skill and agree the plan with the user before you write any code.
+Run the `skills:working` skill and agree the plan with the user before you write any code.
 
 Skip this only when the user already agreed a plan in this session.
 
