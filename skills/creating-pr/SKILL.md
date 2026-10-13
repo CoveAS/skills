@@ -30,14 +30,13 @@ The title needs no approval. Change it only when the user asks.
 
 ## The body
 
-The body says why the change exists, and what problem it solves. Nothing else.
+The body says what the change does, and why the code base needs it. The why is the problem the
+change solves in the code. It is not the story of how the work started.
 
-Say it in as few words as the why needs. Do not describe the diff. Do not list the files.
+Say it in as few words as the change needs. Do not list the files.
 
-Work the why out from the code, the commits, the branch name and the ticket.
-
-Write what the change does when the why stays unclear. Keep it as short. Tell the user that you
-could not work the why out.
+Work the why out from the code, the commits, the branch name and the ticket. Tell the user when
+you could not work the why out.
 
 ## The steps
 
