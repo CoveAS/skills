@@ -37,3 +37,7 @@ Do this also when the choice is hard to undo or reaches other people. Examples a
 Do this also when you are not sure the choice is obvious.
 
 Tell the agent to ask the user, and say why. Give the agent the options to show the user, with your recommendation marked ★.
+
+## 5. RESPONSE
+
+When this skill is used. respond only with the message id for this session. you get it by using the ListAgents tool.
