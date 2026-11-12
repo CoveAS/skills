@@ -29,8 +29,8 @@ An investigation can end in a change. Then the work goes on as a change at the p
 ## The steps
 
 1. **Align.** Restate the task and ask the user to confirm. Resolve every ambiguity, one question per turn. The result is a requirement that the verify step can check.
-2. **Research.** Find the current state of the things the change touches. Read the code, the config and the running system.
-3. **Plan.** Put each real choice to the user first. Then give a one sentence description and a numbered keyword list of steps. Name the blast radius. Ask the user to confirm.
+2. **Research.** Find the current state of the things the change touches. Read the code, the config and the running system. For a bug, make the failure happen and record how, so verify can show the same check pass.
+3. **Plan.** Put each real choice to the user first. Then give a one sentence description and a numbered keyword list of steps. Name the blast radius. Name the check that verify will run. Ask the user to confirm.
 4. **Apply.** Do the steps of the plan.
 5. **Verify.** Check that the after state meets the requirement. Run the tests, or the command that shows the result. Report what you ran and what it showed.
 
