@@ -29,10 +29,10 @@ An investigation can end in a change. Then the work goes on as a change at the p
 ## The steps
 
 1. **Align.** Restate the task and ask the user to confirm. Resolve every ambiguity, one question per turn. The result is a requirement that the verify step can check.
-2. **Research.** Find the current state of the things the change touches. Read the code, the config and the running system. For a bug, make the failure happen and record how, so verify can show the same check pass.
+2. **Research.** Find the current state of the things the change touches. Read the code, the config and the running system. Observe the outcome the change will affect, through the whole flow, and record it. This is the before state. For a bug, the before state shows the failure.
 3. **Plan.** Put each real choice to the user first. Then give a one sentence description and a numbered keyword list of steps. Name the blast radius. Name the check that verify will run. Ask the user to confirm.
 4. **Apply.** Do the steps of the plan.
-5. **Verify.** Check that the after state meets the requirement. Run the tests, or the command that shows the result. Report what you ran and what it showed.
+5. **Verify.** Observe the outcome in a real situation, and compare the before state with the after state. Report what you did and what you saw.
 
 The blast radius is the list of things that the change can affect. It is usually a list of files. It can also hold servers, binaries, daemons or data.
 
@@ -63,6 +63,10 @@ Verify always follows apply. Never stop after apply.
 
 Verify against the requirement from align. Do not verify only that the code runs.
 
+Go through the whole flow to the place where the outcome shows. Compare it with the before state from research.
+
+Use a few different cases.
+
 Report a fail as a fail, with the output. Then step back to the step where the cause is.
 
 The user does all visual checks. Tell the user what to look at and what to look for. The user's answer is the check.
@@ -86,6 +90,14 @@ Put a real choice to the user before you write the plan. A plan built on an unas
 Show the choices as numbered prose. Give each one a short name and one line on what it costs. Put a ★ on the one you would pick.
 
 Do not use the AskUserQuestion tool.
+
+## When a choice changes the alignment
+
+A choice can change what was agreed at align. A choice can also open new choices or new questions.
+
+After each choice, check if the alignment changed. If it did, state the change in one line.
+
+Then decide what the change needs. Put a new real choice to the user. Take the rest yourself.
 
 ## When the change is hard
 
