@@ -44,6 +44,7 @@ Most skills start when you invoke them, for example `/working`.
 | `storytelling-as-a-business-owner` | Writes a user story as a business owner who wants a result, not software. |
 | `understanding` | Builds a shared understanding of the task before any work starts. |
 | `working` | Runs the path investigate, discuss, plan, do. You pick where to get on and off. |
+| `working-with-agents` | Runs `working`, but a sub-agent takes the choices it can and gives you the rest with the code to answer them. |
 | `worktreeing` | Moves the session into a git worktree, so the main checkout stays free. |
 | `writing-system-docs` | Conventions for documents that explain how a system works. |
 
