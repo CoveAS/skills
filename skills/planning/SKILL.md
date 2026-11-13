@@ -12,6 +12,8 @@ conversation, held after they accept the plan.
 
 A numbered list. Each step is a keyword phrase and one short sentence that says what it does.
 
+Under the list, name the blast radius. The blast radius is the list of things that the change can affect. It is usually a list of files. It can also hold servers, binaries, daemons or data.
+
 ## Where there is a choice
 
 List every valid way to implement the agreement, with what each one costs and what it gives.
