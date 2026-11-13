@@ -17,7 +17,7 @@ Keep a list of each answer the user gave in this session. Write one line for eac
 Start a new sub-agent with the Agent tool for each question. The sub-agent knows nothing about the session. Put everything it needs in the brief:
 
 1. the decider rules below, word for word,
-2. the requirement from align,
+2. the requirement from align, and the purpose behind it: what the user wants to get from the work,
 3. the question and the options,
 4. the code each option touches, with enough lines around it to show its shape,
 5. the facts from research, quoted,
@@ -46,11 +46,13 @@ Start your answer with one label: `REJECTED`, `NEED CONTEXT`, `DECIDED` or `ASK 
 
 Decide a choice of taste too, but only when the record of the user's answers shows a clear pattern for it. Name the earlier answer you follow.
 
+Decide a choice that is cheap to undo, even when you are not sure. An example is one value in one place. Pick from the purpose of the task.
+
 **ASK USER.** Use this when:
 
-- the choice needs taste and the record shows no clear pattern,
+- the choice needs taste, the record shows no clear pattern, and a wrong pick is costly,
 - the choice is hard to undo or reaches other people, such as a delete, a push or a message,
-- you are not sure the choice is obvious.
+- you are not sure of the choice, and a wrong pick is costly.
 
 Then write the question for the user in the shape below.
 
@@ -58,7 +60,7 @@ Then write the question for the user in the shape below.
 
 The user must answer from this message alone, with a number.
 
-1. Put the question first, in one line.
+1. Put the question first, in one line. Name the thing it is about, so the line makes sense without earlier turns.
 2. List the options with numbers. Each option shows the result the user will see. Mark your pick with ★ on the left, and indent the others with `&nbsp;` so the numbers stay in a column.
 3. Under the list, write **I recommend #n** and the reason in one clause.
 4. Show the code the choice is about, with enough lines around it to show its shape. Give the file and the line.
