@@ -28,9 +28,9 @@ An investigation can end in a change. Then the work goes on as a change at the p
 
 ## The steps
 
-1. **Align.** Restate the task and ask the user to confirm. Resolve every ambiguity, one question per turn. The result is a requirement that the verify step can check.
+1. **Align.** Restate the task. Ask the user to confirm when a wrong guess is costly. Resolve every ambiguity, one question per turn. The result is a requirement that the verify step can check.
 2. **Research.** Find the current state of the things the change touches. Read the code, the config and the running system. Observe the outcome the change will affect, through the whole flow, and record it. This is the before state. For a bug, the before state shows the failure.
-3. **Plan.** Put each real choice to the user first. Then give a one sentence description and a numbered keyword list of steps. Name the blast radius. Name the check that verify will run. Ask the user to confirm.
+3. **Plan.** Put each real choice to the user first. Then give a one sentence description and a numbered keyword list of steps. Name the blast radius. Name the check that verify will run. Ask the user to confirm when a wrong guess is costly.
 4. **Apply.** Do the steps of the plan.
 5. **Verify.** Observe the outcome in a real situation, and compare the before state with the after state. Report what you did and what you saw.
 
@@ -95,9 +95,11 @@ Do not use the AskUserQuestion tool.
 
 A choice can change what was agreed at align. A choice can also open new choices or new questions.
 
-After each choice, check if the alignment changed. If it did, state the change in one line.
+After each choice, check if the alignment shifted. If the alignment shifted, state the shift in one line.
 
-Then decide what the change needs. Put a new real choice to the user. Take the rest yourself.
+Then decide what the shift needs. Put a new real choice to the user. Take the rest yourself.
+
+If the shift needs new facts, step back to research.
 
 ## When the change is hard
 
@@ -110,7 +112,7 @@ Treat these as signs of hard work:
 - You must read long docs to find how to do a simple thing.
 - You fight the framework or the library.
 
-Stop when you see a sign. Look for the change in shape that makes the task obvious. The change can be a different design choice, a rewrite of a module or a better doc.
+Stop when you see a sign. Look for a reshape. The reshape can be anything that makes the task obvious. Examples are a different design choice, a rewrite of a module or a better doc.
 
 Put the reshape to the user as a real choice before you write the plan. Name the cost of each path.
 
@@ -131,8 +133,10 @@ Examples of choices that are not real:
 State the decision as done, not as a question. "Two commits: X, then Y."
 The user corrects you if it is wrong. That costs one turn. Asking always costs one turn.
 
-## Before the user confirms
+## When to confirm
 
-Do not change any file until the user confirms the plan.
+Ask the user to confirm when a wrong guess is costly. A wrong guess is costly when the work is hard to undo or the blast radius is large.
 
-The one exception is a change you entered at apply.
+Otherwise state what you will do, and go on.
+
+Do not start a costly change until the user confirms the plan.
