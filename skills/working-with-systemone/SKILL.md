@@ -8,16 +8,6 @@ Follow the `working-with-agents` skill. Change one thing: the decider is a local
 
 A decision model does not write text. It reads the facts once and gives a probability for each option. So you do the parts of the decider rules that need words.
 
-## Find the model
-
-1. Run `lsof -iTCP -sTCP:LISTEN -nP | grep llama` to find the ports.
-2. Run `curl -s http://localhost:<port>/v1/models` on each port until one lists models.
-3. Pick the model with `"output_modalities":["decisions"]` and status `loaded`. Use its `id`.
-
-Use `LiquidAI/d1-3B-GGUF`. Smaller models such as Laya give wrong picks on plain choices.
-
-If no decision model is loaded, tell the user. Then use `working-with-agents` as it is.
-
 ## Before you send
 
 Apply these decider rules yourself:
@@ -28,24 +18,32 @@ Apply these decider rules yourself:
 
 ## Send the choice
 
-POST to `http://localhost:<port>/v1/systemone`:
+Run this command as it is. Change only `state`, `instructions` and `criteria`.
 
-```json
-{
-  "model": "<id>",
+```bash
+PORT=$(ps -ax -o command | grep '[l]lama serve --models-preset' | grep -o -- '--port [0-9]*' | cut -d' ' -f2)
+python3 - "$PORT" <<'PY'
+import json, sys, urllib.request
+base = f"http://localhost:{sys.argv[1]}/v1"
+body = {
   "state": "<purpose of the task, the facts, the code, the record of the user's answers>",
-  "questions": {
-    "pick": {
-      "type": "choice",
-      "instructions": "<the question, in one line>",
-      "criteria": {
-        "<short label>": "<the result the user will see with this option>",
-        "<short label>": "<the result the user will see with this option>"
-      }
-    }
-  }
+  "questions": {"pick": {"type": "choice",
+    "instructions": "<the question, in one line>",
+    "criteria": {"<short label>": "<the result the user will see with this option>",
+                 "<short label>": "<the result the user will see with this option>"}}}
 }
+models = json.load(urllib.request.urlopen(base + "/models"))["data"]
+loaded = [m["id"] for m in models
+          if "decisions" in m["architecture"]["output_modalities"] and m["status"]["value"] == "loaded"]
+body["model"] = loaded[0] if loaded else "LiquidAI/d1-3B-GGUF:Q4_K_M"
+req = urllib.request.Request(base + "/systemone", json.dumps(body).encode(), {"Content-Type": "application/json"})
+print(body["model"], json.dumps(json.load(urllib.request.urlopen(req))["answers"]["pick"]))
+PY
 ```
+
+The command finds the Llama.app server and the loaded decision model. When no decision model is loaded, the server loads d1-3B. The first call then takes longer.
+
+If the command fails, tell the user. Then use `working-with-agents` as it is.
 
 Write each criterion as a full description. Bare labels give bad picks.
 
@@ -53,10 +51,12 @@ Keep `state` short and plain. The model has a small context, often 4096 tokens. 
 
 ## Act on the answer
 
-The answer is in `answers.pick`. `choice` is the top option. `confidence` is the gap between the top two probabilities.
+The command prints the model and the answer. `choice` is the top option. `confidence` is the gap between the top two probabilities.
 
 - **Confidence 0.6 or more.** Take the choice. Tell the user in one line what you took, and the probability. Go on.
 - **Less than 0.6.** Ask the user in the question shape from `working-with-agents`. Mark the model's pick with ★ only if you agree with it. Add the probabilities to the facts.
+
+If the printed model is not d1-3B, tell the user. Smaller models such as Laya give wrong picks on plain choices.
 
 <!-- ponytail: 0.6 comes from three sample choices on d1-3B. Tune it from the record of the user's answers. -->
 
